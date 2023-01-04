@@ -16,4 +16,10 @@ public class DrivingLicence {
     @With
     @Default
     int availablePoints = 12;
+
+    public DrivingLicence withavailablePoints(int newPoints) {
+        return DrivingLicence.builder().availablePoints(newPoints)
+                .id(this.id).driverSocialSecurityNumber(this.driverSocialSecurityNumber)
+                .build();
+    }
 }
